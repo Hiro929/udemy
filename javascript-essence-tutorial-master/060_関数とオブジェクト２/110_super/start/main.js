@@ -29,15 +29,22 @@ const taro = new Japanese('Taro', 23, 'Male');
 console.log(taro);
 taro.bye();
 
-// const american = {
-//     hello() {
-//         console.log('hello ' + this.name);
-//     }
-// }
+const american = {
+    hello() {
+        console.log('hello ' + this.name);
+    }
+}
 
-// const bob = {
-//     name: 'Bob',
-//     hello() {
-//         super.hello();
-//     }
-// }
+const bob = {
+    name: 'Bob',
+    hello() {
+        super.hello();
+        // console.log('hello ' + this.name);
+    }
+}
+// bob.bye = function() {
+//     super.hello();
+// } エラーになる
+
+Object.setPrototypeOf(bob, american)
+bob.hello();
