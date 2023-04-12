@@ -20,7 +20,7 @@
  * calc.set(10)
  * 	.minus()
  * 	.set(3) -> '7'を出力
- * 	.mutiply()
+ * 	.multiply()
  * 	.set(6) -> '42'を出力（10 - 3) * 6
  */
 class Calculator {
