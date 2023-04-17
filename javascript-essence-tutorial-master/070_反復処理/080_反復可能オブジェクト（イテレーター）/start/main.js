@@ -12,14 +12,14 @@ Object.prototype[Symbol.iterator] = function() {
 		next() {
 			let key = keys[i++];
 			return {
-				value: 0,
-				done: true
+				value: [key, _this[key]],
+				done: i > keys.length
 			}
 		}
 	}
 }
 
 // const items = Object.entries(obj);
-for (let item of items) {
-	console.log(item);
+for (let [k, v] of items) {
+	console.log(k, v);
 }
