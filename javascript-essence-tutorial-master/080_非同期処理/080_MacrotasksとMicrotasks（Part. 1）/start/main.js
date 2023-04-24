@@ -1,7 +1,9 @@
+// マクロタスク
 setTimeout(function task1() {
   console.log('task1');
 });
 
+// マイクロタスク
 new Promise(function promise(resolve) {
   console.log('promise');
   resolve();
