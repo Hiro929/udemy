@@ -56,4 +56,4 @@ function trigger(target, key) {
   }
   deps.forEach(effect => effect());
 }
-export { effect, trigger, reactive };
+export { effect, trigger, reactive, computed };
